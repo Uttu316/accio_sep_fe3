@@ -1,0 +1,30 @@
+.page_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  box-shadow: 4px 4px 4px #ccc;
+  padding: 16px;
+}
+
+.page_title {
+  font-size: 28px;
+  color: teal;
+}
+.page_navbar {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 12px;
+}
+
+.page_navbar a {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  color: salmon;
+}
+.page_navbar a:hover {
+  color: teal;
+}

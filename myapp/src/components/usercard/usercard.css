@@ -1,0 +1,126 @@
+.usercard {
+  --clay-bg: #e8ecff;
+  --clay-surface: #eef1ff;
+  --clay-accent: #6c72ff;
+  --clay-text: #2b2d5c;
+  --clay-muted: #7a7fb0;
+
+  width: 300px;
+  padding: 28px 24px 32px;
+  border-radius: 32px;
+  background: var(--clay-surface);
+  text-align: center;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--clay-text);
+  box-shadow:
+    12px 12px 24px rgba(163, 168, 214, 0.55),
+    -12px -12px 24px rgba(255, 255, 255, 0.9),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.6),
+    inset -4px -4px 10px rgba(163, 168, 214, 0.25);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.usercard:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    16px 16px 32px rgba(163, 168, 214, 0.6),
+    -16px -16px 32px rgba(255, 255, 255, 0.95),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.6),
+    inset -4px -4px 10px rgba(163, 168, 214, 0.25);
+}
+
+.usercard__avatar-wrap {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  padding: 10px;
+  background: var(--clay-surface);
+  box-shadow:
+    8px 8px 16px rgba(163, 168, 214, 0.55),
+    -8px -8px 16px rgba(255, 255, 255, 0.9),
+    inset 3px 3px 6px rgba(163, 168, 214, 0.3),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.usercard__avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.usercard__name {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.usercard__profession {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--clay-accent);
+  box-shadow:
+    4px 4px 10px rgba(108, 114, 255, 0.4),
+    -3px -3px 8px rgba(255, 255, 255, 0.6);
+}
+
+.usercard__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.usercard__meta-item {
+  flex: 1;
+  padding: 12px 6px;
+  border-radius: 18px;
+  background: var(--clay-surface);
+  box-shadow:
+    inset 3px 3px 6px rgba(163, 168, 214, 0.3),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.85);
+}
+
+.usercard__label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--clay-muted);
+  margin-bottom: 4px;
+}
+
+.usercard__value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.usercard__email {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clay-accent);
+  text-decoration: none;
+  word-break: break-all;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: var(--clay-surface);
+  box-shadow:
+    6px 6px 12px rgba(163, 168, 214, 0.5),
+    -6px -6px 12px rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease;
+}
+
+.usercard__email:hover {
+  color: var(--clay-text);
+}

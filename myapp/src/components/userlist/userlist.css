@@ -1,0 +1,8 @@
+.user-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 24px;
+  background: #e8ecff;
+}
