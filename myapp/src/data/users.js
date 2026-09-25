@@ -8,11 +8,6 @@ export const USERS = [
     country: "Australia",
     gender: "Female",
     profession: "Cricketer",
-    awards: [
-      { id: "42948924394m9", name: "Player of the match" },
-      { id: "4323132428924394m9", name: "Man of the series" },
-      { id: "439043032232", name: "Player of the tournament" },
-    ],
   },
   {
     id: "4323132428924394m9",

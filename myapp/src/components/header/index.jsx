@@ -1,10 +1,12 @@
-import "./header.css";
+import styles from "./header.module.css";
+
 const Header = (props) => {
   const { title } = props;
+
   return (
-    <header className="page_header">
-      <h1 className="page_title">{title}</h1>
-      <nav className="page_navbar">
+    <header className={styles.pageHeader}>
+      <h1 className={`${styles.pageTitle} ${styles.text}`}>{title}</h1>
+      <nav className={styles.pageNavbar}>
         <a href="#">Contact</a>
         <a href="#">About</a>
       </nav>

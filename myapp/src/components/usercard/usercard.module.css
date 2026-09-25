@@ -1,4 +1,4 @@
-.usercard {
+.card {
   --clay-bg: #e8ecff;
   --clay-surface: #eef1ff;
   --clay-accent: #6c72ff;
@@ -22,7 +22,7 @@
     box-shadow 0.25s ease;
 }
 
-.usercard:hover {
+.card:hover {
   transform: translateY(-6px);
   box-shadow:
     16px 16px 32px rgba(163, 168, 214, 0.6),
@@ -31,7 +31,7 @@
     inset -4px -4px 10px rgba(163, 168, 214, 0.25);
 }
 
-.usercard__avatar-wrap {
+.avatarWrap {
   width: 110px;
   height: 110px;
   margin: 0 auto 18px;
@@ -45,7 +45,7 @@
     inset -3px -3px 6px rgba(255, 255, 255, 0.8);
 }
 
-.usercard__avatar {
+.avatar {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -53,13 +53,13 @@
   display: block;
 }
 
-.usercard__name {
+.name {
   margin: 0;
   font-size: 1.35rem;
   font-weight: 700;
 }
 
-.usercard__profession {
+.profession {
   display: inline-block;
   margin-top: 8px;
   padding: 6px 16px;
@@ -73,14 +73,14 @@
     -3px -3px 8px rgba(255, 255, 255, 0.6);
 }
 
-.usercard__meta {
+.meta {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   margin: 22px 0;
 }
 
-.usercard__meta-item {
+.metaItem {
   flex: 1;
   padding: 12px 6px;
   border-radius: 18px;
@@ -90,7 +90,7 @@
     inset -3px -3px 6px rgba(255, 255, 255, 0.85);
 }
 
-.usercard__label {
+.label {
   display: block;
   font-size: 0.68rem;
   text-transform: uppercase;
@@ -99,13 +99,13 @@
   margin-bottom: 4px;
 }
 
-.usercard__value {
+.value {
   display: block;
   font-size: 0.95rem;
   font-weight: 600;
 }
 
-.usercard__email {
+.email {
   display: block;
   font-size: 0.85rem;
   font-weight: 500;
@@ -121,6 +121,6 @@
   transition: color 0.2s ease;
 }
 
-.usercard__email:hover {
+.email:hover {
   color: var(--clay-text);
 }

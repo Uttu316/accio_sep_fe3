@@ -1,31 +1,31 @@
-import "./usercard.css";
+import styles from "./usercard.module.css";
 
 const UserCard = ({ user }) => {
   return (
-    <div className="usercard">
-      <div className="usercard__avatar-wrap">
-        <img className="usercard__avatar" src={user.avatar} alt={user.name} />
+    <div className={styles.card}>
+      <div className={styles.avatarWrap}>
+        <img className={styles.avatar} src={user.avatar} alt={user.name} />
       </div>
-      <div className="usercard__body">
-        <h2 className="usercard__name">{user.name}</h2>
-        <span className="usercard__profession">{user.profession}</span>
+      <div className={styles.body}>
+        <h2 className={styles.name}>{user.name}</h2>
+        <span className={styles.profession}>{user.profession}</span>
 
-        <div className="usercard__meta">
-          <div className="usercard__meta-item">
-            <span className="usercard__label">Age</span>
-            <span className="usercard__value">{user.age}</span>
+        <div className={styles.meta}>
+          <div className={styles.metaItem}>
+            <span className={styles.label}>Age</span>
+            <span className={styles.value}>{user.age}</span>
           </div>
-          <div className="usercard__meta-item">
-            <span className="usercard__label">Gender</span>
-            <span className="usercard__value">{user.gender}</span>
+          <div className={styles.metaItem}>
+            <span className={styles.label}>Gender</span>
+            <span className={styles.value}>{user.gender}</span>
           </div>
-          <div className="usercard__meta-item">
-            <span className="usercard__label">Country</span>
-            <span className="usercard__value">{user.country}</span>
+          <div className={styles.metaItem}>
+            <span className={styles.label}>Country</span>
+            <span className={styles.value}>{user.country}</span>
           </div>
         </div>
 
-        <a className="usercard__email" href={`mailto:${user.email}`}>
+        <a className={styles.email} href={`mailto:${user.email}`}>
           {user.email}
         </a>
       </div>

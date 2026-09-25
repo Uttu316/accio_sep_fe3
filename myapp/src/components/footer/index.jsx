@@ -1,7 +1,8 @@
-import "./footer.css";
+import styles from "./footer.module.css";
+
 const Footer = () => {
   return (
-    <footer className="page_footer">
+    <footer className={styles.pageFooter}>
       Made with Love
       <code>©️ Accio Sept Batch</code>
     </footer>
