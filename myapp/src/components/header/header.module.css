@@ -30,3 +30,8 @@
 .pageNavbar a:hover {
   color: teal;
 }
+
+.pageNavbar a.active {
+  color: teal;
+  font-weight: 700;
+}

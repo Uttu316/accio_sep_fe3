@@ -1,0 +1,190 @@
+.page {
+  --clay-bg: #e9ecfb;
+  --clay-surface: #eef1ff;
+  --clay-accent: #6c72ff;
+  --clay-text: #2b2d5c;
+  --clay-muted: #8488b8;
+
+  background: var(--clay-bg);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--clay-text);
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 40px;
+}
+
+.hero {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--clay-accent);
+  background: var(--clay-surface);
+  box-shadow:
+    4px 4px 9px rgba(163, 168, 214, 0.5),
+    -4px -4px 9px rgba(255, 255, 255, 0.9);
+}
+
+.heroTitle {
+  margin: 20px 0 16px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.heroTitle span {
+  color: var(--clay-accent);
+}
+
+.heroText {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--clay-muted);
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.storyImageWrap {
+  padding: 20px;
+  border-radius: 36px;
+  background: var(--clay-surface);
+  box-shadow:
+    14px 14px 30px rgba(163, 168, 214, 0.55),
+    -14px -14px 30px rgba(255, 255, 255, 0.95);
+}
+
+.storyImage {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.storyTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.storyText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--clay-muted);
+  margin: 0 0 16px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+}
+
+.statCard {
+  text-align: center;
+  padding: 36px 20px;
+  border-radius: 26px;
+  background: var(--clay-surface);
+  box-shadow:
+    inset 4px 4px 10px rgba(163, 168, 214, 0.35),
+    inset -4px -4px 10px rgba(255, 255, 255, 0.9);
+}
+
+.statNum {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--clay-accent);
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clay-muted);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.sectionSub {
+  text-align: center;
+  color: var(--clay-muted);
+  margin: 0 0 44px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.member {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 26px;
+  background: var(--clay-surface);
+  box-shadow:
+    10px 10px 22px rgba(163, 168, 214, 0.5),
+    -10px -10px 22px rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.member:hover {
+  transform: translateY(-6px);
+}
+
+.memberAvatarWrap {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--clay-surface);
+  box-shadow:
+    6px 6px 14px rgba(163, 168, 214, 0.5),
+    -6px -6px 14px rgba(255, 255, 255, 0.9),
+    inset 3px 3px 6px rgba(163, 168, 214, 0.3),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.memberAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.memberName {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.memberRole {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clay-accent);
+}

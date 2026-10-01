@@ -1,18 +1,23 @@
-import Controller from "./components/Controller";
-import Counter from "./components/counter";
-import Footer from "./components/footer";
-import Header from "./components/header";
-import UserList from "./components/userlist";
+import { BrowserRouter, Route, Routes } from "react-router";
+import PracticePage from "./pages/practice";
+import ProductsPage from "./pages/products";
+import HomePage from "./pages/home";
+import AboutPage from "./pages/about";
+import ContactPage from "./pages/contact";
+import NotFoundPage from "./pages/notfound";
 
 function App() {
   return (
-    <div>
-      <Header title="My App" />
-      <UserList />
-      <Counter />
-      <Controller />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/practice" element={<PracticePage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,68 @@
+.bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 auto 32px;
+  max-width: 1200px;
+  padding: 16px 20px;
+  border-radius: 24px;
+  background: var(--clay-surface);
+  box-shadow:
+    10px 10px 20px rgba(163, 168, 214, 0.5),
+    -10px -10px 20px rgba(255, 255, 255, 0.9);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 8px 0 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clay-muted);
+}
+
+.labelIcon {
+  color: var(--clay-accent);
+}
+
+.pill {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--clay-text);
+  background: var(--clay-surface);
+  box-shadow:
+    5px 5px 10px rgba(163, 168, 214, 0.5),
+    -5px -5px 10px rgba(255, 255, 255, 0.9);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    color 0.15s ease;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  color: var(--clay-accent);
+}
+
+.pill:active {
+  transform: translateY(1px);
+}
+
+.pillActive {
+  color: #fff;
+  background: var(--clay-accent);
+  box-shadow:
+    inset 3px 3px 7px rgba(0, 0, 0, 0.2),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.25);
+}
+
+.pillActive:hover {
+  color: #fff;
+  transform: translateY(0);
+}
