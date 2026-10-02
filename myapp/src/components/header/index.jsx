@@ -2,8 +2,13 @@ import { NavLink, Link } from "react-router";
 import styles from "./header.module.css";
 import logo from "../../assets/react.svg";
 
+import { IoCart as CartIcon } from "react-icons/io5";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 const Header = (props) => {
   const { title } = props;
+
+  const { cartSize } = useContext(CartContext);
 
   return (
     <header className={styles.pageHeader}>
@@ -31,6 +36,15 @@ const Header = (props) => {
           className={({ isActive }) => (isActive ? styles.active : undefined)}
         >
           Practice
+        </NavLink>
+        <NavLink
+          to="/cart"
+          className={({ isActive }) =>
+            `${styles.cartLink} ${isActive ? styles.cartActive : ""}`
+          }
+        >
+          <CartIcon className={styles.cartIcon} />
+          <span className={styles.cartBadge}>{cartSize}</span>
         </NavLink>
       </nav>
     </header>

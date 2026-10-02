@@ -1,7 +1,6 @@
 import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import styles from "./contact.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const INFO = [
   {
@@ -28,9 +27,7 @@ const INFO = [
 
 const ContactPage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="Clayful" />
-
+    <PageWrapper className={styles.page}>
       <section className={styles.section}>
         <div className={styles.hero}>
           <span className={styles.eyebrow}>Get in touch</span>
@@ -101,9 +98,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

@@ -1,6 +1,5 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import styles from "./about.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const STATS = [
   { num: "250K+", label: "Happy Customers" },
@@ -34,9 +33,7 @@ const TEAM = [
 
 const AboutPage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="Clayful" />
-
+    <PageWrapper title="Clayful" className={styles.page}>
       <section className={styles.section}>
         <div className={styles.hero}>
           <span className={styles.eyebrow}>Our Story</span>
@@ -108,9 +105,7 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

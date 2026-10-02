@@ -1,8 +1,7 @@
 import { FiTruck, FiShield, FiRefreshCw, FiHeadphones } from "react-icons/fi";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import styles from "./home.module.css";
 import { useNavigate } from "react-router";
+import PageWrapper from "../../components/pageWrapper";
 
 const FEATURES = [
   {
@@ -57,9 +56,7 @@ const HomePage = () => {
     navigate("/products");
   };
   return (
-    <div className={styles.page}>
-      <Header title="Clayful" />
-
+    <PageWrapper title="Clayful" className={styles.page}>
       <section className={styles.section}>
         <div className={styles.hero}>
           <div>
@@ -126,9 +123,7 @@ const HomePage = () => {
         </p>
         <button className={styles.ctaBtn}>Create Account</button>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

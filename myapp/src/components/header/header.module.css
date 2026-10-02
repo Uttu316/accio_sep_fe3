@@ -35,3 +35,67 @@
   color: teal;
   font-weight: 700;
 }
+
+.pageNavbar a.cartLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 16px;
+  color: #6c72ff;
+  background: #eef1ff;
+  box-shadow:
+    5px 5px 10px rgba(163, 168, 214, 0.55),
+    -5px -5px 10px rgba(255, 255, 255, 0.9);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    color 0.15s ease;
+}
+
+.pageNavbar a.cartLink:hover {
+  color: #6c72ff;
+  transform: translateY(-2px);
+}
+
+.pageNavbar a.cartLink:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 3px 3px 7px rgba(163, 168, 214, 0.5),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
+.pageNavbar a.cartActive {
+  box-shadow:
+    inset 3px 3px 7px rgba(163, 168, 214, 0.5),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
+.cartIcon {
+  font-size: 24px;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background: #ff6c8a;
+  box-shadow:
+    3px 3px 7px rgba(255, 108, 138, 0.45),
+    -2px -2px 5px rgba(255, 255, 255, 0.6);
+}

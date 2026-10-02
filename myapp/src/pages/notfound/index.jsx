@@ -4,12 +4,11 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import notFoundImg from "../../assets/404.svg";
 import styles from "./notfound.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const NotFoundPage = () => {
   return (
-    <div className={styles.page}>
-      <Header title="Clayful" />
-
+    <PageWrapper title="Clayful" className={styles.page}>
       <main className={styles.main}>
         <div className={styles.card}>
           <span className={styles.blobOne} />
@@ -46,9 +45,7 @@ const NotFoundPage = () => {
           </div>
         </div>
       </main>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 
