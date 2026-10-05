@@ -1,50 +1,117 @@
+.headerShell {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 18px 24px 0;
+}
+
 .pageHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: whitesmoke;
-  box-shadow: 4px 4px 4px #ccc;
-  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px 12px 16px;
+  border-radius: 22px;
+  background: rgba(238, 241, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    10px 14px 30px rgba(123, 130, 190, 0.28),
+    -8px -8px 22px rgba(255, 255, 255, 0.7);
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
 }
 
-.pageTitle {
-  font-size: 28px;
-  color: teal;
+/* Brand */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
+.logoChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #eef1ff;
+  box-shadow:
+    5px 5px 10px rgba(163, 168, 214, 0.5),
+    -5px -5px 10px rgba(255, 255, 255, 0.9);
+}
+
+.logoChip img {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.brandName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #2b2d5c;
+}
+
+/* Nav */
 .pageNavbar {
   display: flex;
   align-items: center;
-  justify-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-.pageNavbar a {
-  padding: 10px;
-  cursor: pointer;
-  font-size: 20px;
+.navPill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 16px;
+  background: #eef1ff;
+  box-shadow:
+    inset 3px 3px 7px rgba(163, 168, 214, 0.35),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
+.navLink {
+  padding: 9px 18px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  font-weight: 500;
   text-decoration: none;
-  color: salmon;
+  color: #6b6f9c;
+  transition:
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
 }
 
-.pageNavbar a:hover {
-  color: teal;
+.navLink:hover {
+  color: #2b2d5c;
 }
 
-.pageNavbar a.active {
-  color: teal;
+.navLink.active {
+  color: #6c72ff;
   font-weight: 700;
+  background: #eef1ff;
+  box-shadow:
+    4px 4px 9px rgba(163, 168, 214, 0.5),
+    -4px -4px 9px rgba(255, 255, 255, 0.95);
 }
 
-.pageNavbar a.cartLink {
+/* Cart */
+.cartLink {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
-  padding: 0;
   border-radius: 16px;
+  text-decoration: none;
   color: #6c72ff;
   background: #eef1ff;
   box-shadow:
@@ -52,23 +119,21 @@
     -5px -5px 10px rgba(255, 255, 255, 0.9);
   transition:
     transform 0.15s ease,
-    box-shadow 0.15s ease,
-    color 0.15s ease;
+    box-shadow 0.15s ease;
 }
 
-.pageNavbar a.cartLink:hover {
-  color: #6c72ff;
+.cartLink:hover {
   transform: translateY(-2px);
 }
 
-.pageNavbar a.cartLink:active {
+.cartLink:active {
   transform: translateY(1px);
   box-shadow:
     inset 3px 3px 7px rgba(163, 168, 214, 0.5),
     inset -3px -3px 7px rgba(255, 255, 255, 0.9);
 }
 
-.pageNavbar a.cartActive {
+.cartActive {
   box-shadow:
     inset 3px 3px 7px rgba(163, 168, 214, 0.5),
     inset -3px -3px 7px rgba(255, 255, 255, 0.9);
@@ -98,4 +163,24 @@
   box-shadow:
     3px 3px 7px rgba(255, 108, 138, 0.45),
     -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 640px) {
+  .headerShell {
+    padding: 12px 12px 0;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navPill {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navLink {
+    padding: 8px 14px;
+  }
 }

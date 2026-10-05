@@ -1,0 +1,123 @@
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 64px 40px;
+  border-radius: 36px;
+  background: var(--clay-surface);
+  box-shadow:
+    14px 14px 30px rgba(163, 168, 214, 0.55),
+    -14px -14px 30px rgba(255, 255, 255, 0.95);
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  font-size: 3.4rem;
+  color: var(--clay-green);
+  background: var(--clay-surface);
+  box-shadow:
+    inset 6px 6px 14px rgba(163, 168, 214, 0.4),
+    inset -6px -6px 14px rgba(255, 255, 255, 0.9);
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 16px;
+  border-radius: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--clay-green);
+  background: var(--clay-surface);
+  box-shadow:
+    4px 4px 9px rgba(163, 168, 214, 0.5),
+    -4px -4px 9px rgba(255, 255, 255, 0.9);
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--clay-text);
+}
+
+.text {
+  margin: 0 0 10px;
+  max-width: 440px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clay-muted);
+}
+
+.orderId {
+  margin: 0 0 32px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clay-accent);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.btnPrimary {
+  color: #fff;
+  background: var(--clay-accent);
+  box-shadow:
+    6px 6px 14px rgba(108, 114, 255, 0.45),
+    -5px -5px 12px rgba(255, 255, 255, 0.7);
+}
+
+.btnGhost {
+  color: var(--clay-text);
+  background: var(--clay-surface);
+  box-shadow:
+    6px 6px 14px rgba(163, 168, 214, 0.5),
+    -6px -6px 14px rgba(255, 255, 255, 0.9);
+}
+
+.btnPrimary:hover,
+.btnGhost:hover {
+  transform: translateY(-3px);
+}

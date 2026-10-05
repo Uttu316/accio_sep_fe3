@@ -1,0 +1,67 @@
+.perks {
+  margin-top: 56px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.sub {
+  text-align: center;
+  color: var(--clay-muted);
+  margin: 0 0 36px;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  padding: 30px 24px;
+  text-align: center;
+  border-radius: 26px;
+  background: var(--clay-surface);
+  box-shadow:
+    10px 10px 22px rgba(163, 168, 214, 0.5),
+    -10px -10px 22px rgba(255, 255, 255, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  border-radius: 18px;
+  font-size: 1.5rem;
+  color: var(--clay-accent);
+  background: var(--clay-surface);
+  box-shadow:
+    inset 4px 4px 8px rgba(163, 168, 214, 0.4),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.name {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--clay-muted);
+}

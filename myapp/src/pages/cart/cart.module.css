@@ -1,0 +1,49 @@
+.page {
+  --clay-bg: #e9ecfb;
+  --clay-surface: #eef1ff;
+  --clay-accent: #6c72ff;
+  --clay-danger: #ff6c8a;
+  --clay-text: #2b2d5c;
+  --clay-muted: #8488b8;
+  --clay-green: #2fbf87;
+  --clay-star: #ffb020;
+
+  background: var(--clay-bg);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--clay-text);
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.pageTitle span {
+  color: var(--clay-accent);
+}
+
+.pageSub {
+  margin: 0 0 32px;
+  font-size: 0.95rem;
+  color: var(--clay-muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
