@@ -1,18 +1,16 @@
 import Controller from "../../components/Controller";
 import Counter from "../../components/counter";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
+import PageWrapper from "../../components/pageWrapper";
 import UserList from "../../components/userlist";
+import styles from "./practice.module.css";
 
 const PracticePage = () => {
   return (
-    <div>
-      <Header title="My App" />
+    <PageWrapper title="My App" className={styles.page}>
       <UserList />
       <Counter />
       <Controller />
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

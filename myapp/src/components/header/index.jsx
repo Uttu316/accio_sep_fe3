@@ -1,22 +1,70 @@
-import { NavLink, Link, useNavigate } from "react-router";
+import { NavLink, Link, useNavigate, useLocation } from "react-router";
 import styles from "./header.module.css";
 import logo from "../../assets/react.svg";
 
 import { IoCart as CartIcon } from "react-icons/io5";
 import { FiUser, FiLogOut, FiLogIn } from "react-icons/fi";
-import { useContext, useEffect, useRef, useState } from "react";
+import {
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { CartContext } from "../../contexts/CartContext";
+
+const NAV_ITEMS = [
+  { to: "/products", label: "Shop" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+  { to: "/practice", label: "Practice" },
+];
 
 const Header = (props) => {
   const { title } = props;
 
   const { cartSize, clearCart } = useContext(CartContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const linkClass = ({ isActive }) =>
     `${styles.navLink} ${isActive ? styles.active : ""}`;
 
   const isLoggedin = localStorage.getItem("user");
+
+  // Sliding active indicator
+  const pillRef = useRef(null);
+  const linkRefs = useRef({});
+  const [slider, setSlider] = useState({ left: 0, width: 0, visible: false });
+
+  useLayoutEffect(() => {
+    const activeEl = linkRefs.current[location.pathname];
+    if (activeEl && pillRef.current) {
+      setSlider({
+        left: activeEl.offsetLeft,
+        width: activeEl.offsetWidth,
+        visible: true,
+      });
+    } else {
+      // No nav item matches the current route, hide the slider
+      setSlider((s) => ({ ...s, visible: false }));
+    }
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const onResize = () => {
+      const activeEl = linkRefs.current[location.pathname];
+      if (activeEl) {
+        setSlider({
+          left: activeEl.offsetLeft,
+          width: activeEl.offsetWidth,
+          visible: true,
+        });
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [location.pathname]);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -54,19 +102,28 @@ const Header = (props) => {
         </Link>
 
         <nav className={styles.pageNavbar}>
-          <div className={styles.navPill}>
-            <NavLink to="/products" className={linkClass}>
-              Shop
-            </NavLink>
-            <NavLink to="/about" className={linkClass}>
-              About
-            </NavLink>
-            <NavLink to="/contact" className={linkClass}>
-              Contact
-            </NavLink>
-            <NavLink to="/practice" className={linkClass}>
-              Practice
-            </NavLink>
+          <div className={styles.navPill} ref={pillRef}>
+            <span
+              className={styles.navSlider}
+              style={{
+                transform: `translateX(${slider.left}px)`,
+                width: `${slider.width}px`,
+                opacity: slider.visible ? 1 : 0,
+              }}
+              aria-hidden="true"
+            />
+            {NAV_ITEMS.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={linkClass}
+                ref={(el) => {
+                  linkRefs.current[item.to] = el;
+                }}
+              >
+                {item.label}
+              </NavLink>
+            ))}
           </div>
 
           {isLoggedin && (
