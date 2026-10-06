@@ -1,7 +1,7 @@
 import { FaStar } from "react-icons/fa";
 import { FiShoppingCart, FiTrash2 } from "react-icons/fi";
 import styles from "./productItem.module.css";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
@@ -9,10 +9,18 @@ const ProductItem = ({ product }) => {
   const { thumbnail, id, brand, rating, price, title, description, category } =
     product;
 
+  const navigate = useNavigate();
+
+  const isLoggedin = localStorage.getItem("user");
   const { addToCart, removeFromCart, isInCart } = useContext(CartContext);
 
   const onAddCart = (e) => {
     e.preventDefault();
+
+    if (!isLoggedin) {
+      navigate("/login");
+      return;
+    }
     addToCart(product);
   };
   const onRemoveCart = (e) => {

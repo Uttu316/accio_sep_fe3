@@ -8,6 +8,9 @@ import NotFoundPage from "./pages/notfound";
 import ProductPage from "./pages/product";
 import CartProvider from "./contexts/CartContext";
 import CartPage from "./pages/cart";
+import Login from "./login";
+import Signup from "./signup";
+import { PrivateRoute, ProtectedRoute } from "./routes";
 
 function App() {
   return (
@@ -21,7 +24,13 @@ function App() {
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/cart" element={<CartPage />} />
+          </Route>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </CartProvider>

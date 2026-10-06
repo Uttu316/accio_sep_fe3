@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import {
   FiChevronRight,
   FiShoppingCart,
@@ -137,6 +137,10 @@ const ProductDetail = ({ product, activeImage, setActiveImage }) => {
     id,
   } = product;
 
+  const navigate = useNavigate();
+
+  const isLoggedIn = localStorage.getItem("user");
+
   const gallery = images && images.length ? images : [thumbnail];
   const current = gallery[activeImage] || thumbnail;
 
@@ -157,6 +161,10 @@ const ProductDetail = ({ product, activeImage, setActiveImage }) => {
   const inCart = isInCart(id);
 
   const onAddCart = () => {
+    if (!isLoggedIn) {
+      navigate("/login");
+      return;
+    }
     addToCart(product);
   };
   const onRemoveCart = () => {

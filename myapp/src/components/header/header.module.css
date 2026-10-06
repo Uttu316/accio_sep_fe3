@@ -143,6 +143,172 @@
   font-size: 24px;
 }
 
+/* Profile */
+.profile {
+  position: relative;
+}
+
+.profileBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #6c72ff;
+  background: #eef1ff;
+  box-shadow:
+    5px 5px 10px rgba(163, 168, 214, 0.55),
+    -5px -5px 10px rgba(255, 255, 255, 0.9);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.profileBtn:hover {
+  transform: translateY(-2px);
+}
+
+.profileBtn:active,
+.profileActive {
+  box-shadow:
+    inset 3px 3px 7px rgba(163, 168, 214, 0.5),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
+.profileIcon {
+  font-size: 22px;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  width: 230px;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(238, 241, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    10px 14px 30px rgba(123, 130, 190, 0.3),
+    -8px -8px 22px rgba(255, 255, 255, 0.7);
+  z-index: 60;
+  animation: menuIn 0.16s ease-out;
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 16px;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  background: rgba(238, 241, 255, 0.92);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 12px;
+}
+
+.menuAvatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  font-size: 1.1rem;
+  color: #6c72ff;
+  background: #eef1ff;
+  box-shadow:
+    inset 3px 3px 6px rgba(163, 168, 214, 0.4),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.menuMeta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.menuName {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2b2d5c;
+}
+
+.menuSub {
+  font-size: 0.76rem;
+  color: #8488b8;
+}
+
+.menuDivider {
+  height: 1px;
+  margin: 4px 6px 8px;
+  background: rgba(163, 168, 214, 0.35);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 13px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  color: #2b2d5c;
+  background: transparent;
+  transition:
+    background 0.14s ease,
+    box-shadow 0.14s ease,
+    transform 0.14s ease;
+}
+
+.menuItem svg {
+  font-size: 1.1rem;
+}
+
+.menuItem:hover {
+  background: #eef1ff;
+  box-shadow:
+    4px 4px 9px rgba(163, 168, 214, 0.45),
+    -4px -4px 9px rgba(255, 255, 255, 0.95);
+}
+
+.menuItem:active {
+  transform: translateY(1px);
+}
+
+.menuDanger {
+  color: #ff6c8a;
+}
+
 .cartBadge {
   position: absolute;
   top: -6px;
