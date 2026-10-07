@@ -1,0 +1,35 @@
+.page {
+  --clay-bg: #e9ecfb;
+  --clay-surface: #eef1ff;
+  --clay-accent: #6c72ff;
+  --clay-text: #2b2d5c;
+  --clay-muted: #8488b8;
+
+  min-height: 100vh;
+  background: var(--clay-bg);
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  color: var(--clay-text);
+}
+
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 8px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+
+.title span {
+  color: var(--clay-accent);
+}
+
+.sub {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--clay-muted);
+}

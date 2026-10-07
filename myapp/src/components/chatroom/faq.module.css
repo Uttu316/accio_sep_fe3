@@ -1,0 +1,68 @@
+.faq {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.sub {
+  text-align: center;
+  color: var(--clay-muted);
+  margin: 0 0 28px;
+  font-size: 0.9rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.item {
+  padding: 20px 24px;
+  border-radius: 22px;
+  background: var(--clay-surface);
+  box-shadow:
+    8px 8px 18px rgba(163, 168, 214, 0.5),
+    -8px -8px 18px rgba(255, 255, 255, 0.9);
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clay-text);
+}
+
+.qIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  font-size: 0.95rem;
+  color: var(--clay-accent);
+  background: var(--clay-surface);
+  box-shadow:
+    inset 3px 3px 6px rgba(163, 168, 214, 0.4),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.answer {
+  margin: 0;
+  padding-left: 46px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--clay-muted);
+}

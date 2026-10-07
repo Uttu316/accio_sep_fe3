@@ -11,6 +11,7 @@ import CartPage from "./pages/cart";
 import Login from "./login";
 import Signup from "./signup";
 import { PrivateRoute, ProtectedRoute } from "./routes";
+import SupportPage from "./pages/support";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
           <Route element={<PrivateRoute />}>
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/support" element={<SupportPage />} />
           </Route>
           <Route element={<ProtectedRoute />}>
             <Route path="/login" element={<Login />} />

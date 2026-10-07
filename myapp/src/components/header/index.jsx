@@ -4,6 +4,7 @@ import logo from "../../assets/react.svg";
 
 import { IoCart as CartIcon } from "react-icons/io5";
 import { FiUser, FiLogOut, FiLogIn } from "react-icons/fi";
+import { MdOutlineSupportAgent as SupportIcon } from "react-icons/md";
 import {
   useContext,
   useEffect,
@@ -91,6 +92,8 @@ const Header = (props) => {
     navigate("/login");
   };
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <div className={styles.headerShell}>
       <header className={styles.pageHeader}>
@@ -171,15 +174,25 @@ const Header = (props) => {
                 <div className={styles.menuDivider} />
 
                 {isLoggedin ? (
-                  <button
-                    type="button"
-                    className={`${styles.menuItem} ${styles.menuDanger}`}
-                    onClick={onLogout}
-                    role="menuitem"
-                  >
-                    <FiLogOut />
-                    Logout
-                  </button>
+                  <>
+                    <Link
+                      onClick={closeMenu}
+                      className={`${styles.menuItem}`}
+                      to="/support"
+                    >
+                      <SupportIcon />
+                      Support
+                    </Link>
+                    <button
+                      type="button"
+                      className={`${styles.menuItem} ${styles.menuDanger}`}
+                      onClick={onLogout}
+                      role="menuitem"
+                    >
+                      <FiLogOut />
+                      Logout
+                    </button>
+                  </>
                 ) : (
                   <button
                     type="button"
